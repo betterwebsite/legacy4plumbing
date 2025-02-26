@@ -1809,6 +1809,9 @@
 <--- -------------------------- -*/
 /* Mobile - 1023px */
 @media only screen and (max-width: 1023.5px) {
+  .cs-desktop-button {
+    display: none;
+  }
   #cs-navigation .cs-li {
     text-align: center;
     width: 100%;
