@@ -1,12 +1,12 @@
 module.exports = {
     "name": "Legacy 4 Plumbing",
     "email": "service@legacy4plumbing.com",
-    "phoneForTel": "405-788-01139",
-    "phoneFormatted": "(405) 788-01139",
+    "phoneForTel": "405-788-1139",
+    "phoneFormatted": "(405) 788-1139",
     "address": {
-        "lineOne": "2796 Broce Drive",
-        "lineTwo": "",
-        "city": "Oklahoma City",
+        "lineOne": "Legacy 4 Plumbing",
+        "lineTwo": "2796 Broce Dr",
+        "city": "Norman",
         "state": "OK",
         "zip": "73072",
         "country": "US",

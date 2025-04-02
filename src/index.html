@@ -12,6 +12,14 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
+
+<!-- LightGallery CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+
+<!-- LightGallery JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
 
@@ -74,18 +82,93 @@ eleventyNavigation:
 
 {% block body %}
 
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1619">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">
+                <!-- <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M0.621948 7.49889L6.40262 15L10.343 15L4.56231 7.49889L10.343 -4.2492e-07L6.40262 -2.52681e-07L0.621948 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M7.62195 7.49889L13.4026 15L17.343 15L11.5623 7.49889L17.343 -4.2492e-07L13.4026 -2.52681e-07L7.62195 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M14.7789 7.49889L20.5596 15L24.5 15L18.7193 7.49889L24.5 -4.2492e-07L20.5596 -2.52681e-07L14.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M22.7789 7.49889L28.5596 15L32.5 15L26.7193 7.49889L32.5 -4.2492e-07L28.5596 -2.52681e-07L22.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M30.7789 7.49889L36.5596 15L40.5 15L34.7193 7.49889L40.5 -4.2492e-07L36.5596 -2.52681e-07L30.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M38.7789 7.49889L44.5596 15L48.5 15L42.7193 7.49889L48.5 -4.2492e-07L44.5596 -2.52681e-07L38.7789 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg> -->
+                Legacy 4 Inc.
+                <!-- <svg class="cs-chevron" width="49" height="15" viewBox="0 0 49 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.7">
+                    <path d="M48.3781 7.49889L42.5974 15L38.657 15L44.4377 7.49889L38.657 -4.2492e-07L42.5974 -2.52681e-07L48.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M41.3781 7.49889L35.5974 15L31.657 15L37.4377 7.49889L31.657 -4.2492e-07L35.5974 -2.52681e-07L41.3781 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M34.2211 7.49889L28.4404 15L24.5 15L30.2807 7.49889L24.5 -4.2492e-07L28.4404 -2.52681e-07L34.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M26.2211 7.49889L20.4404 15L16.5 15L22.2807 7.49889L16.5 -4.2492e-07L20.4404 -2.52681e-07L26.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M18.2211 7.49889L12.4404 15L8.50004 15L14.2807 7.49889L8.50004 -4.2492e-07L12.4404 -2.52681e-07L18.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    <path d="M10.2211 7.49889L4.4404 15L0.500041 15L6.28071 7.49889L0.500042 -4.2492e-07L4.4404 -2.52681e-07L10.2211 7.49889Z" fill="var(--chevronColor)"/>
+                    </g>
+                </svg> -->
+            </span>
+            <h1 class="cs-title">“Committed to Comfort, Built on Integrity”</h1>
+            <a href="/contact" class="cs-button-solid">Request Service</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/air-vent.svg" alt="hvac" width="48" height="48">
+                <h3 class="cs-h3">Residential and Commercial HVAC</h3>
+                <p class="cs-item-text">
+                    From routine maintenance to complete system replacements, we ensure your comfort in every season
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/home.svg" alt="hvac" width="48" height="48" style="filter: invert(1);">
+                <h3 class="cs-h3">New Construction Installations</h3>
+                <p class="cs-item-text">
+                    Expert plumbing and HVAC systems for residential and commercial projects.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/snowflake.svg" alt="hvac" width="48" height="48">
+                <h3 class="cs-h3">Refrigeration Solutions</h3>
+                <p class="cs-item-text">
+                    Reliable, efficient, and tailored to keep your business running smoothly.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/clipboard-check.svg" alt="car" width="48" height="48">
+                <h3 class="cs-h3">Maintenance Agreements</h3>
+                <p class="cs-item-text">
+                    Customized plans designed to maximize efficiency and minimize unexpected repairs.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.jpg">
+        <img decoding="async" src="/assets/images/hero.jpg" alt="meeting" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
+
     <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-1060">
+<!-- <section id="hero-1060">
     <div class="cs-container">
         <div class="cs-content">
-            <h1 class="cs-title">Legacy 4 Plumbing, Inc. in Norman Oklahoma</h1>
+            <h1 class="cs-title">Legacy 4 Plumbing Inc.</h1>
             <p class="cs-text">
-                We offer professional and reliable residential and commercial plumbing services. We are family owned and operated. We are dedicated and determined to giving our customers excellent service results.
+                “Committed to Comfort, Built on Integrity”
             </p>
-            <a href="/contact" class="cs-button-solid">Request Appointment</a>
+
+            <a href="/contact" class="cs-button-solid">Request Service</a>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
@@ -118,13 +201,12 @@ eleventyNavigation:
         </ul>
     </div>
 
-    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
     <picture class="cs-background">
         <source media="(max-width: 600px)" srcset="/assets/images/guys.jpg">
         <source media="(min-width: 601px)" srcset="/assets/images/guys.jpg">
         <img decoding="async" src="/assets/images/guys.jpg" alt="mechanic" width="2250" height="1500" aria-hidden="true">
     </picture>
-</section>
+</section> -->
                                 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
@@ -178,76 +260,369 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                   Services                   -->
 <!-- ============================================ -->
-<section id="services-1330">
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+<div class="custom-shape-divider-bottom-1743616213">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+<style>
+    .custom-shape-divider-bottom-1743616213 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743616213 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1743616213 .shape-fill {
+    fill: #F7F7F7;
+}
+</style>
+<section id="services-1628">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Our services</span>
-            <h2 class="cs-title">We Provide High-Quality HVAC and Plumbing Services</h2>
-            <p class="cs-text">Our Legacy has been, and continues to be, built on providing our customers with outstanding service and high quality results </p>
-            <a href="tel:+14057881139" class="cs-button-solid">Call Now</a>
+            <div class="cs-flex">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">Legacy 4, Inc. Services You!</h2>
+            </div>
+            <p class="cs-text">
+                At Legacy 4, Inc., we pride ourselves on delivering top-notch plumbing, heating, and air services to the Oklahoma City community and surrounding areas. With a commitment to excellence and a foundation built on trust, we are offering our services to better serve your needs
+            </p>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/air-conditioner.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/air-conditioner.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/air-conditioner.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Residential and Commercial HVAC</h3>
+                    <p class="cs-item-text">
+                        From regular tune-ups to full system upgrades, we keep you comfortable all year round.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/new-construction.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/new-construction.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/new-construction.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">New Construction Installations</h3>
+                    <p class="cs-item-text">
+                        Professional plumbing and HVAC solutions for both residential and commercial properties.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/fridge.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/fridge.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/fridge.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Refrigeration Solutions</h3>
+                    <p class="cs-item-text">
+                        Dependable, efficient, and built to keep your business operating without interruptions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="/assets/images/maintenance.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="/assets/images/maintenance.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/maintenance.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Maintenance Agreements</h3>
+                    <p class="cs-item-text">
+                        Personalized solutions that boost performance and reduce the risk of surprise breakdowns.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                              
+
+<!-- ============================================ -->
+<!--                  Timeline                    -->
+<!-- ============================================ -->
+
+<section id="timeline-504">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">The Legacy 4 Inc.</span>
+                <h2 class="cs-title">Why Choose <span class="cs-color">Us</span></h2>
+            </div>
+            <p class="cs-text">
+                Choose Legacy 4, Inc. for dependable, round-the-clock plumbing and HVAC service backed by licensed, experienced technicians. We offer transparent pricing, flexible financing, and complete comfort solutions for homes and businesses alike.
+            </p>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/svgs/home.svg"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Residential</h3>
-                    <p class="cs-item-text">The ability for more info them elit to a marketing team to see all orchi in velit officia consequat duis enim save.</p>
-                </div>
+                <h3 class="cs-h3">24/7 Emergency Service</h3>
+                <p class="cs-item-text">
+                    We’re always on call to handle urgent HVAC and plumbing issues, day or night.
+                </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/svgs/building.svg" style="filter: invert(1);"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Commercial</h3>
-                    <p class="cs-item-text">The ability for more info them elit to a marketing team to see all orchi in velit officia consequat duis enim save.</p>
-                </div>
+                <h3 class="cs-h3">Skilled, Trusted Technicians</h3>
+                <p class="cs-item-text">
+                    Our licensed, insured, and background-checked pros deliver reliable, high-quality work every time.
+                </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/svgs/air-vent.svg" style="filter: invert(1);"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Central Heat and Air</h3>
-                    <p class="cs-item-text">The ability for more info them elit to a marketing team to see all orchi in velit officia consequat duis enim molit.</p>
-                </div>
+                <h3 class="cs-h3">Transparent Pricing & Financing</h3>
+                <p class="cs-item-text">
+                    No surprises — just honest, upfront quotes with financing options available.
+                </p>
             </li>
             <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/svgs/wrench.svg" style="filter: invert(1);"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">More Services</h3>
-                    <p class="cs-item-text">The ability for more info them elit to a marketing team to see all orchi in velit officia consequat duis enim molit.</p>
-                </div>
+                <h3 class="cs-h3">One-Stop Comfort Solution</h3>
+                <p class="cs-item-text">
+                    From AC repairs to leak detection, we cover all your residential and commercial needs under one roof.
+                </p>
             </li>
         </ul>
     </div>
 </section>
                                 
+                                
+<div class="custom-shape-divider-top-1743616319">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+
+<style>
+    .custom-shape-divider-top-1743616319 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #f7f7f7;
+}
+
+.custom-shape-divider-top-1743616319 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-top-1743616319 .shape-fill {
+    fill: #179EF0;
+}
+</style>
+
+
+
+
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-1897">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Gallery</span>
+                <h2 class="cs-title">Legacy 4 Does More!</h2>
+            </div>
+            <!-- <a class="cs-button-solid" href="">View All</a> -->
+        </div>
+        <!--Gallery-->
+        <div class="cs-gallery">
+            <div class="cs-item">
+                <p class="cs-item-text">Full Shower + Tile Install</p>
+              
+                <div class="cs-picture-group" data-gallery="gallery1">
+                  <a href="/assets/images/before1.jpg" data-sub-html="Before">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/before1.jpg" alt="Before" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">Before</span>
+                  </a>
+                </div>
+              
+                <div class="cs-picture-group" data-gallery="gallery1">
+                  <a href="/assets/images/after1.jpg" data-sub-html="After">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/after1.jpg" alt="After" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">After</span>
+                  </a>
+                </div>
+              </div>
+            <div class="cs-item">
+                <p class="cs-item-text">Dry Wall + Texture</p>
+              
+                <div class="cs-picture-group" data-gallery="gallery2">
+                  <a href="/assets/images/before2.jpg" data-sub-html="Before">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/before2.jpg" alt="Before" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">Before</span>
+                  </a>
+                </div>
+              
+                <div class="cs-picture-group" data-gallery="gallery2">
+                  <a href="/assets/images/after2.jpg" data-sub-html="After">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/after2.jpg" alt="After" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">After</span>
+                  </a>
+                </div>
+              </div>
+            <div class="cs-item">
+                <p class="cs-item-text">Window Re-Paint</p>
+              
+                <div class="cs-picture-group" data-gallery="gallery3">
+                  <a href="/assets/images/before3.jpg" data-sub-html="Before">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/before3.jpg" alt="Before" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">Before</span>
+                  </a>
+                </div>
+              
+                <div class="cs-picture-group" data-gallery="gallery3">
+                  <a href="/assets/images/after3.jpg" data-sub-html="After">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/after3.jpg" alt="After" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">After</span>
+                  </a>
+                </div>
+              </div>
+            <div class="cs-item">
+                <p class="cs-item-text">His+Hers Sink Install</p>
+              
+                <div class="cs-picture-group" data-gallery="gallery4">
+                  <a href="/assets/images/before4.jpg" data-sub-html="Before">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/before4.jpg" alt="Before" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">Before</span>
+                  </a>
+                </div>
+              
+                <div class="cs-picture-group" data-gallery="gallery4">
+                  <a href="/assets/images/after4.jpg" data-sub-html="After">
+                    <picture class="cs-picture">
+                      <img src="/assets/images/after4.jpg" alt="After" width="305" height="400" />
+                    </picture>
+                    <span class="cs-tag">After</span>
+                  </a>
+                </div>
+              </div>
+              
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const galleryGroups = {};
+      
+          document.querySelectorAll('.cs-picture-group a').forEach(anchor => {
+            const groupId = anchor.closest('.cs-picture-group').dataset.gallery;
+            if (!galleryGroups[groupId]) {
+              galleryGroups[groupId] = [];
+            }
+            galleryGroups[groupId].push(anchor);
+          });
+      
+          Object.entries(galleryGroups).forEach(([groupId, anchors]) => {
+            // create a container and clone the anchors into it
+            const container = document.createElement("div");
+            container.style.display = "none"
+            anchors.forEach(anchor => container.appendChild(anchor.cloneNode(true)));
+      
+            document.body.appendChild(container);
+      
+            lightGallery(container, {
+              selector: 'a',
+              plugins: [lgZoom],
+              speed: 500
+            });
+      
+            // bind click on any original anchor
+            anchors.forEach((anchor, i) => {
+              anchor.addEventListener("click", e => {
+                e.preventDefault();
+                container.style.display = "block";
+                container.querySelectorAll('a')[i].click();
+              });
+            });
+
+            container.addEventListener("lgAfterClose", () => {
+                container.style.display = "none";
+            });
+          });
+        });
+      </script>
+</section>
+                                
+
+
+
+
 
     <!-- ============================================ -->
     <!--                   Gallery                    -->
     <!-- ============================================ -->
 
-    <section id="gallery">
+    <!-- <section id="gallery">
         <div class="cs-container">
             <span class="cs-topper">Our Portfolio</span>
             <h2 class="cs-title">We are proud of the work we do.</h2>
             <div class="cs-image-group">
-                <!-- Row 1-->
                 <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <picture class="cs-picture cs-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
@@ -264,9 +639,7 @@ eleventyNavigation:
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
                     </picture>
                 </div>
-                <!-- Row 2 -->
                 <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <picture class="cs-picture cs-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
@@ -283,9 +656,7 @@ eleventyNavigation:
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
                     </picture>
                 </div>
-                <!-- Row 3 -->
                 <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <picture class="cs-picture cs-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
@@ -304,87 +675,111 @@ eleventyNavigation:
 
                 </div>
             </div>
-            <!-- <a href="#" class="cs-button-solid">View Full Gallery</a> -->
         </div>
-    </section>
+    </section> -->
 
-    <!-- ============================================ -->
+
+
+
+
+<!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
+<div class="custom-shape-divider-bottom-1743616219">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+<style>
+    .custom-shape-divider-bottom-1743616219 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: #f7f7f7;
+}
 
-<section id="reviews-1673">
+.custom-shape-divider-bottom-1743616219 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1743616219 .shape-fill {
+    fill: #ffffff;
+}
+</style>
+<section id="reviews-2244">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Testimonials</span>
-            <h2 class="cs-title">Our Customer Reviews</h2>
+            <div class="cs-wrapper">
+                <span class="cs-topper">Testimonials</span>
+                <h2 class="cs-title">What Our Clients Say</h2>
+            </div>
+            <a aria-label="read more reviews" href="https://www.google.com/search?q=legacy4+plumbing&oq=legacy4+plumbing&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMgkIAhAAGA0YgAQyCAgDEAAYFhgeMgoIBBAAGIAEGKIEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMTkzOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x87b2699172ec7a35:0x614734f161bce67c,1,,,," class="cs-button-solid" target="_blank">Our Reviews</a>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <div class="cs-flex-group">
+                <div class="cs-image-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/ecomm-headshot1.jpeg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
                     </picture>
-                    <span class="cs-name">
-                        Lisa Flores
-                        <span class="cs-job">Satisfied Customer</span>
-                    </span>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
                 </div>
-                <div class="wrapper">
+                <p class="cs-item-text">
+                    Legacy 4 plumbing. From the Receptionist to Jade, buster and Zack. Quality service and people you can trust. Best of the best in my book, thanks for the good work legacy 4.
+                </p>
+                <span class="cs-name">
+                    James Johnson
                     <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                    <p class="cs-review">
-                        Customer service was very nice and understanding. They got someone out to our house as quickly as possible. The plumber who showed up was very kind and efficient. Got to work and fixed our plumbing problems. Very nice group of people to do business with. I would definitely call them if I have future plumbing needs.
-                    </p>
-                </div>
-                <!--Quote Icon-->
-                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99" loading="lazy">
+                    <span class="cs-desc"></span>
+                </span>
             </li>
             <li class="cs-item">
-                <div class="cs-flex-group">
+                <div class="cs-image-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
                     </picture>
-                    <span class="cs-name">
-                        Jacob Manuel
-                        <span class="cs-job">Satisfied Customer</span>
-                    </span>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
                 </div>
-                <div class="wrapper">
+                <p class="cs-item-text">
+                    I was getting a second opinion on whether I had a leak in my plumbing, they were super- honest and their price was where a normal working person can afford it!! The lady who answered the phone was very very nice!
+                </p>
+                <span class="cs-name">
+                    Kathy Emerson
                     <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                    <p class="cs-review">
-                        Jade and Jenny are AWESOME!! I foolishly forgot to have our water drip in the subzero temperatures we've had and let my pipes freeze. While they weren't able to make out to our house due to the unfathomable amount of snow we had, they called every day to check on us and Jade actually walked me through what procedure they would have gone through. It worked!! We got our water thawed and back on. Thank you all so much for your help!!
-                    </p>
-                </div>
-                <!--Quote Icon-->
-                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99" loading="lazy">
+                    <span class="cs-desc"></span>
+                </span>
             </li>
             <li class="cs-item">
-                <div class="cs-flex-group">
+                <div class="cs-image-group">
                     <picture class="cs-picture">
-                        <img class="cs-profile" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/review1.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
                     </picture>
-                    <span class="cs-name">
-                        Jonathan Fowler
-                        <span class="cs-job">Satisfied Customer</span>
-                    </span>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
                 </div>
-                <div class="wrapper">
+                <p class="cs-item-text">
+                    Anthony, a skilled tech, assessed our situation while presenting possible remedies. We were very impressed with the level of professionalism and responsiveness. Thank you again, Anthony!
+                </p>
+                <span class="cs-name">
+                    Jav C.
                     <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                    <p class="cs-review">
-                        top notch service, and very nice people. highly recommend. have used for commercial business and personal home service. timothy is a great asset to their team!
-                    </p>
-                </div>
-                <!--Quote Icon-->
-                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99" loading="lazy">
+                    <span class="cs-desc"></span>
+                </span>
             </li>
         </ul>
     </div>
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/van.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/van.jpg">
-        <img aria-hidden="true" decoding="async" src="/assets/images/van.jpg" alt="accountant" width="886" height="842" loading="lazy">
-    </picture>
 </section>
-                                
+
+
+  
+  
+  
+
 
     {% include 'components/cta.html' %}
 {% endblock %}
