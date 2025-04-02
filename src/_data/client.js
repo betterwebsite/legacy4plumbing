@@ -10,7 +10,7 @@ module.exports = {
         "state": "OK",
         "zip": "73072",
         "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "mapLink": "https://maps.app.goo.gl/fZwUTx81ryL7q2ks6"
     },
     "socials": {
         "facebook": "https://www.facebook.com/legacy4incplumbing/",
