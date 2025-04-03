@@ -2,114 +2,108 @@
 <!--                 Navigation                   -->
 <!-- ============================================ -->
 
+
+
+
+
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
 <header id="cs-navigation">
     <!--Nav Logo-->
-    <a href="" class="cs-logo cs-desktop" aria-label="back to home">
-        <div class="cs-logo-wrapper">
-            <!--Default Logo-->
-            <img src="/assets/svgs/logo2.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
-            <!--Dark Mode Logo-->
-            <img class="cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/construction-logo-white2.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
-        </div>
+    <a href="" class="cs-logo" aria-label="back to home" style="background-color: white;">
+        <img alt="" src="/assets/svgs/logo2.svg" height="29" width="210" decoding="async" aria-hidden="true">
     </a>
-    <div class="cs-middle">
-        <!--Top Bar-->
-        <div class="cs-top-bar">
-            <div class="cs-top-social">
-                <a href="https://www.facebook.com/legacy4incplumbing/" target="_blank" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
-                <a href="https://www.instagram.com/legacy4plumbing/" target="_blank" class="cs-social-link">
-                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
-                </a>
+    <!--Top Bar-->
+    <ul class="cs-top-bar">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Call Us Now</span>
+                <a href="tel:405-788-1139" class="cs-link">(405) 788-1139</a>
             </div>
-            <ul class="cs-location">
-                <li class="cs-item cs-remove">
-                    <img class="cs-icon" src="/assets/svgs/marker.svg" alt="icon" width="20" height="20" aria-hidden="true" decoding="async">
-                    2796 Broce Drive, Norman, OK, 73072
-                </li>
-                <li class="cs-item">
-                    <img class="cs-icon" src="/assets/svgs/clock.svg" alt="icon" width="20" height="20" aria-hidden="true" decoding="async">
-                    M-F: 7:30am - 5:30pm
-                </li>
-            </ul>
-        </div>
-        <div class="cs-bottom-bar">
-            <a href="" class="cs-logo cs-mobile" aria-label="back to home">
-                <div class="cs-logo-wrapper">
-                    <!--Default Logo-->
-                    <img class="cs-default" src="/assets/svgs/logo2.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
-                    <!--Dark Mode Logo-->
-                    <img class="cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/construction-logo-white2.svg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send A Message</span>
+                <a href="mailto:admin@legacy4plumbing.com" class="cs-link">admin@legacy4plumbing.com</a>
+            </div>
+        </li>
+        <!-- <li class="cs-item cs-remove">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Visit Us At</span>
+                <a href="" class="cs-link">2492 Fake Rd.</a>
+            </div>
+        </li> -->
+    </ul>
+    <div class="cs-bottom-bar">
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
                 </div>
-            </a>
-            <!--Navigation List-->
-            <nav class="cs-nav" role="navigation">
-                <!--Mobile Nav Toggle-->
-                <button class="cs-toggle" aria-label="mobile menu toggle">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li">
-                            <a href="/" class="cs-li-link {{ 'cs-active' if '' == page.fileSlug }}">
-                                Home
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
-                                About
-                            </a>
-                        </li>
-                        <li class="cs-li">
-                            <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
-                                Contact
-                            </a>
-                        </li>
-                        <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                        <li class="cs-li cs-dropdown" tabindex="0">
-                            <span class="cs-li-link">
-                                Services
-                                <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/arrow-dwon2.svg" alt="dropdown icon" width="24" height="24" decoding="async" aria-hidden="true">
-                            </span>
-                            <ul class="cs-drop-ul">
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">New Construction</a>
-                                </li>
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">Home Remodels</a>
-                                </li>
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">Clogged Pipes</a>
-                                </li>
-                                <li class="cs-drop-li">
-                                    <a href="" class="cs-li-link cs-drop-link">Extra Services</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-                <a class="cs-desktop-button" href="tel:+14057881139">
-                    <picture class="cs-wrapper">
-                        <img class="cs-button-icon" loading="lazy" decoding="async" src="/assets/svgs/phone.svg" alt="icon" width="24" height="24">
-                    </picture>
-                    <div class="cs-info">
-                        <span class="cs-header">Call Now</span>
-                        <span class="cs-link-content">(405) 788-1139</span>
-                    </div>
-                </a>
-            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
-                <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
-                <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
-            </button> -->
-        </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how many there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {{ 'cs-active' if '' == page.fileSlug }}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
+                            Contact
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown">
+                        <span class="cs-li-link">
+                            Services
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">New Construction</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Home Remodels</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Clogged Pipes</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="" class="cs-li-link cs-drop-link">Extra Services</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="/contact" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
     </div>
 </header>
                                 

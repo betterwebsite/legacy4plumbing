@@ -23,29 +23,14 @@ function ariaExpanded() {
     }
 }
 
-const dropdowns = document.querySelectorAll('.cs-dropdown');
-
-dropdowns.forEach(dropdown => {
-  let timer;
-  const keepOpen = () => {
-    clearTimeout(timer);
-    dropdown.classList.add('cs-active');
-  };
-
-  const scheduleClose = () => {
-    timer = setTimeout(() => {
-      dropdown.classList.remove('cs-active');
-    }, 350);
-  };
-
-  // When the mouse enters or moves within the container, keep it open.
-  dropdown.addEventListener('mouseenter', keepOpen);
-  dropdown.addEventListener('mousemove', keepOpen);
-  
-  // When the mouse leaves the container, start the timer to close.
-  dropdown.addEventListener('mouseleave', scheduleClose);
-});
-
+// mobile nav toggle code
+const dropdowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+    // for (const item of dropdowns) {
+    //     const onClick = () => {
+    //     item.classList.toggle('cs-active')
+    // }
+    // item.addEventListener('click', onClick)
+    // }
 
 // after scrolling down 100px, add .scroll class to the #cs-navigation
 document.addEventListener('scroll', (e) => { 
@@ -57,3 +42,26 @@ document.querySelector('#cs-navigation').classList.add('scroll')
     }
 });
                             
+const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+if (window.matchMedia("(min-width: 64rem)").matches) {
+  // Desktop: use mouse events with a 350ms delay before closing
+  dropDowns.forEach(item => {
+     let closeTimer;
+     item.addEventListener('mouseenter', () => {
+         clearTimeout(closeTimer);
+         item.classList.add('cs-active');
+     });
+     item.addEventListener('mouseleave', () => {
+         closeTimer = setTimeout(() => {
+            item.classList.remove('cs-active');
+         }, 250);
+     });
+  });
+} else {
+  // Mobile: toggle dropdown on click
+  dropDowns.forEach(item => {
+      item.addEventListener('click', () => {
+          item.classList.toggle('cs-active');
+      });
+  });
+}
