@@ -160,6 +160,18 @@ eleventyNavigation:
         color: #333;
       }
     }
+
+
+    /* Mobile-only visibility */
+.mobile-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
   </style>
 
 <section id="hero-1946">
@@ -192,45 +204,161 @@ eleventyNavigation:
             </div>
             <div class="service-item">
                 <div class="service-icon">
-                    <img src="/assets/svgs/hvac-icon.svg" alt="Water Quality">
+                    <img src="/assets/svgs/alert.svg" alt="Water Quality">
                 </div>
               <div class="service-text" >
-                <div class="service-title">Water Heaters</div>
-                <div class="service-description">Residential HVAC Repair & Replacement</div>
+                <div class="service-title">Emergency Service</div>
+                <div class="service-description">24/7 Attention</div>
               </div>
             </div>
-            <div class="service-item">
+            <div class="service-item mobile-only">
                 <div class="service-icon">
-                    <img src="/assets/svgs/hvac-icon.svg" alt="Water Quality">
+                    <img src="/assets/svgs/clipboard.svg" alt="Water Quality">
                 </div>
               <div class="service-text" >
-                <div class="service-title">Drain Sewers</div>
-                <div class="service-description">Residential HVAC Repair & Replacement</div>
-              </div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <img src="/assets/svgs/hvac-icon.svg" alt="Water Quality">
-                </div>
-              <div class="service-text" >
-                <div class="service-title">HVAC</div>
-                <div class="service-description">Residential HVAC Repair & Replacement</div>
-              </div>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <img src="/assets/svgs/hvac-icon.svg" alt="Water Quality">
-                </div>
-              <div class="service-text" >
-                <div class="service-title">HVAC</div>
-                <div class="service-description">Residential HVAC Repair & Replacement</div>
+                <div class="service-title">Maintenance Agreements</div>
+                <div class="service-description">24/7 Attention</div>
               </div>
             </div>
           </div>
     </div>
 </section>
                                 
-                       
+        
+               
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+<!-- <div class="custom-shape-divider-bottom-1743616213">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+<style>
+    .custom-shape-divider-bottom-1743616213 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743616213 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1743616213 .shape-fill {
+    fill: #F7F7F7;
+}
+</style> -->
+<section id="services-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <!-- <span class="cs-topper">Services in Norman</span> -->
+                <h2 class="cs-title">Plumbing & HVAC Services in Norman, OK</h2>
+            </div>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <!-- <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/new-construction.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/new-construction.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/new-construction.jpg" alt="Plumbing Services" width="413" height="420">
+                    </picture> -->
+                    <h3 class="cs-h3">Norman Plumbing Services</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Fast, Reliable, and Local Plumbing Solutions</strong></li>
+                        <li><strong>Emergency Plumbing Service</strong><br>24/7 response for burst pipes, flooding, and urgent leaks.</li>
+                        <li><strong>Leak Detection & Repair</strong><br>Advanced tools to find and fix water leaks before they cause damage.</li>
+                        <li><strong>Sewer Cleaning & Drain Repair</strong><br>Clear clogged drains and repair damaged sewer lines quickly.</li>
+                        <li><strong>Water Heater Inspection & Replacement</strong><br>Extend the life of your water heater or get a high-efficiency upgrade.</li>
+                        <li><strong>Gas Line Repair & Installation</strong><br>Safe, code-compliant gas piping for homes and businesses.</li>
+                    </ul>
+                    <!-- <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span> -->
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <!-- <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/fridge.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/fridge.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/fridge.jpg" alt="Residential HVAC Services" width="413" height="420">
+                    </picture> -->
+                    <h3 class="cs-h3">Norman Residential HVAC</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Comfort, Efficiency, and 24/7 Emergency Support</strong></li>
+                        <li><strong>AC Repair & Replacement</strong><br>Fast diagnostics and top-quality system replacements for all brands.</li>
+                        <li><strong>Seasonal Tune-Ups & Maintenance Plans</strong><br>Stay efficient and avoid breakdowns with regular servicing.</li>
+                        <li><strong>Indoor Air Quality Packages</strong><br>Air purification, humidifiers, and filtration systems for healthier living.</li>
+                    </ul>
+                    <!-- <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span> -->
+                </a>
+            </li>
+        
+            <!-- <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/air-conditioner.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/air-conditioner.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/air-conditioner.jpg" alt="Commercial HVAC & Refrigeration Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Norman Commercial HVAC</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Commercial HVAC & Refrigeration</strong></li>
+                        <li><strong>Rooftop Unit (RTU) Installation & Repair</strong><br>Scalable solutions for offices, retail, and industrial buildings.</li>
+                        <li><strong>Emergency Refrigeration Repair</strong><br>24/7 rapid response to save your inventory and keep systems running.</li>
+                        <li><strong>Walk-In Cooler, Freezer & Display Case Installation</strong><br>Professional-grade refrigeration setup and service.</li>
+                        <li><strong>Preventative Maintenance Programs</strong><br>Keep your systems efficient and compliant with routine service.</li>
+                        <li><strong>Refrigeration System Maintenance Agreements</strong><br>Custom maintenance contracts to protect your commercial investment.</li>
+                    </ul>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/contract.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/contract.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/contract.jpg" alt="More Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Much More in Norman</h3>
+                    <p class="cs-item-text">
+                        See All The Services We Provide In Your Area
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li> -->
+        </ul>
+        
+    </div>
+</section>
+               
+               
 
 <!-- ============================================ -->
 <!--                  Timeline                    -->
@@ -306,7 +434,8 @@ eleventyNavigation:
     fill: #179EF0;
 }
 </style>
-                        
+
+         
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
@@ -331,143 +460,9 @@ eleventyNavigation:
     </section>
 
 <!-- ============================================ -->
-<!--                   Services                   -->
-<!-- ============================================ -->
-<!-- ============================================ -->
-<!--                  Services                    -->
-<!-- ============================================ -->
-<div class="custom-shape-divider-bottom-1743616213">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-    </svg>
-</div>
-<style>
-    .custom-shape-divider-bottom-1743616213 {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1743616213 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 61px;
-}
-
-.custom-shape-divider-bottom-1743616213 .shape-fill {
-    fill: #F7F7F7;
-}
-</style>
-<section id="services-1628">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-flex">
-                <span class="cs-topper">Services in Norman OK</span>
-                <!-- <h2 class="cs-title">Legacy 4, Inc. Plumbing Services Near You!</h2> -->
-            </div>
-        </div>                  
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <a href="/contact" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/new-construction.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/new-construction.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/new-construction.jpg" alt="Plumbing Services" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Norman Plumbing Services</h3>
-                    <ul style="padding: 1rem;">
-                        <li><strong>Fast, Reliable, and Local Plumbing Solutions</strong></li>
-                        <li><strong>Emergency Plumbing Service</strong><br>24/7 response for burst pipes, flooding, and urgent leaks.</li>
-                        <li><strong>Leak Detection & Repair</strong><br>Advanced tools to find and fix water leaks before they cause damage.</li>
-                        <li><strong>Sewer Cleaning & Drain Repair</strong><br>Clear clogged drains and repair damaged sewer lines quickly.</li>
-                        <li><strong>Water Heater Inspection & Replacement</strong><br>Extend the life of your water heater or get a high-efficiency upgrade.</li>
-                        <li><strong>Gas Line Repair & Installation</strong><br>Safe, code-compliant gas piping for homes and businesses.</li>
-                    </ul>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/contact" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/fridge.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/fridge.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/fridge.jpg" alt="Residential HVAC Services" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Norman Residential HVAC</h3>
-                    <ul style="padding: 1rem;">
-                        <li><strong>Comfort, Efficiency, and 24/7 Emergency Support</strong></li>
-                        <li><strong>AC Repair & Replacement</strong><br>Fast diagnostics and top-quality system replacements for all brands.</li>
-                        <li><strong>Seasonal Tune-Ups & Maintenance Plans</strong><br>Stay efficient and avoid breakdowns with regular servicing.</li>
-                        <li><strong>Indoor Air Quality Packages</strong><br>Air purification, humidifiers, and filtration systems for healthier living.</li>
-                    </ul>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/contact" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/air-conditioner.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/air-conditioner.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/air-conditioner.jpg" alt="Commercial HVAC & Refrigeration Services" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Norman Commercial HVAC</h3>
-                    <ul style="padding: 1rem;">
-                        <li><strong>Commercial HVAC & Refrigeration</strong></li>
-                        <li><strong>Rooftop Unit (RTU) Installation & Repair</strong><br>Scalable solutions for offices, retail, and industrial buildings.</li>
-                        <li><strong>Emergency Refrigeration Repair</strong><br>24/7 rapid response to save your inventory and keep systems running.</li>
-                        <li><strong>Walk-In Cooler, Freezer & Display Case Installation</strong><br>Professional-grade refrigeration setup and service.</li>
-                        <li><strong>Preventative Maintenance Programs</strong><br>Keep your systems efficient and compliant with routine service.</li>
-                        <li><strong>Refrigeration System Maintenance Agreements</strong><br>Custom maintenance contracts to protect your commercial investment.</li>
-                    </ul>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-        
-            <li class="cs-item">
-                <a href="/contact" class="cs-link">
-                    <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/contract.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/contract.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/contract.jpg" alt="More Services" width="413" height="420">
-                    </picture>
-                    <h3 class="cs-h3">Much More in Norman</h3>
-                    <p class="cs-item-text">
-                        See All The Services We Provide In Your Area
-                    </p>
-                    <span class="cs-fake-link">
-                        Get Started
-                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
-                    </span>
-                </a>
-            </li>
-        </ul>
-        
-    </div>
-</section>
-               
-
-
-
-
-<!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
+ 
 <div class="custom-shape-divider-bottom-1743616219">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
@@ -482,7 +477,7 @@ eleventyNavigation:
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: #f7f7f7;
+    background-color: white;
 }
 
 .custom-shape-divider-bottom-1743616219 svg {
