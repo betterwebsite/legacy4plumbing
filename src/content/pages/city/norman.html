@@ -1,0 +1,614 @@
+---
+title: 'Legacy 4, Inc. | Norman, OK'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'city/norman/'
+eleventyNavigation:
+    key: Norman
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+<!-- LightGallery CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css">
+
+<!-- LightGallery JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/city.css"/>
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                     Hero                     -->
+<!-- ============================================ -->
+
+<section id="hero-1946">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Legacy 4, Inc.</h2>
+            <div class="cs-flex">
+                <p class="cs-text">Serving Norman, OK For Years</p>
+                <a href="" class="cs-button-solid">Call Now </a>
+            </div>
+        </div>
+        <!-- <picture class="cs-picture">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/construction-site.png" alt="construction site" width="1280" height="510">
+        </picture> -->
+        <ul class="cs-card-group">
+            <li class="cs-item" style="list-style: none;">
+                <a href="/services/plumbing" style="text-decoration: none;">
+                  <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="/assets/svgs/clog.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                  </picture>
+                </a>
+                <div class="cs-text-group">
+                  <a href="/services/plumbing" style="text-decoration: none;"><h3 class="cs-h3">Plumbing</h3></a>
+                  <ul style="padding: 1rem; list-style: none; margin: 0;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Emergency service</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Sewer cleaning drain repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Leak detection and repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Gas repair and install</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Water heater inspection</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Water heater replacement</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;justify-content: center;margin-top: 0.5rem;">
+                        <a href="" style="display: flex;text-decoration: none;">Read More
+                        <img class="cs-icon" src="/assets/svgs/right-arrow.svg" decoding="async" alt="icon" width="10" height="10" aria-hidden="true" style="max-width: 10px;"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
+              <li class="cs-item" style="list-style: none;">
+                <a href="/services/hvac" style="text-decoration: none;">
+                  <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="/assets/svgs/hvac-icon.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                  </picture>
+                </a>
+                <div class="cs-text-group">
+                  <a href="/services/hvac" style="text-decoration: none;"><h3 class="cs-h3">HVAC</h3></a>
+                  <ul style="padding: 1rem; list-style: none; margin: 0;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Residential HVAC AC Repair & Replacement</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Commercial HVAC: Rooftop Unit (RTU) Installation & Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Seasonal Tune-Ups & Maintenance Plans</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Walk-In Cooler & Freezer Installation and Refrigerated Display Case</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Preventative Maintenance</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Emergency Refrigeration Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Indoor Air Quality Packages</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;justify-content: center;margin-top: 0.5rem;">
+                        <a href="" style="display: flex;text-decoration: none;">Read More
+                        <img class="cs-icon" src="/assets/svgs/right-arrow.svg" decoding="async" alt="icon" width="10" height="10" aria-hidden="true" style="max-width: 10px;"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              
+              <li class="cs-item" style="list-style: none;">
+                <a href="/services/hvac" style="text-decoration: none;">
+                  <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="/assets/svgs/hvac-icon.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                  </picture>
+                </a>
+                <div class="cs-text-group">
+                  <a href="/services/hvac" style="text-decoration: none;"><h3 class="cs-h3">HVAC</h3></a>
+                  <ul style="padding: 1rem; list-style: none; margin: 0;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Residential HVAC AC Repair & Replacement</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Commercial HVAC: Rooftop Unit (RTU) Installation & Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Seasonal Tune-Ups & Maintenance Plans</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Walk-In Cooler & Freezer Installation and Refrigerated Display Case</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Preventative Maintenance</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Emergency Refrigeration Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Indoor Air Quality Packages</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;justify-content: center;margin-top: 0.5rem;">
+                        <a href="" style="display: flex;text-decoration: none;">Read More
+                        <img class="cs-icon" src="/assets/svgs/right-arrow.svg" decoding="async" alt="icon" width="10" height="10" aria-hidden="true" style="max-width: 10px;"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li><li class="cs-item" style="list-style: none;">
+                <a href="/services/hvac" style="text-decoration: none;">
+                  <picture class="cs-icon-picture">
+                    <img class="cs-icon" src="/assets/svgs/hvac-icon.svg" decoding="async" alt="icon" width="40" height="40" aria-hidden="true">
+                  </picture>
+                </a>
+                <div class="cs-text-group">
+                  <a href="/services/hvac" style="text-decoration: none;"><h3 class="cs-h3">HVAC</h3></a>
+                  <ul style="padding: 1rem; list-style: none; margin: 0;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Residential HVAC AC Repair & Replacement</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Commercial HVAC: Rooftop Unit (RTU) Installation & Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Seasonal Tune-Ups & Maintenance Plans</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Walk-In Cooler & Freezer Installation and Refrigerated Display Case</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Preventative Maintenance</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;text-align: left;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Emergency Refrigeration Repair</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;">
+                      <img class="cs-icon" src="/assets/svgs/check.svg" alt="icon" width="10" height="10" style="max-width: 15px;filter: hue-rotate(43deg);">
+                      <span>Indoor Air Quality Packages</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;justify-content: center;margin-top: 0.5rem;">
+                        <a href="" style="display: flex;text-decoration: none;">Read More
+                        <img class="cs-icon" src="/assets/svgs/right-arrow.svg" decoding="async" alt="icon" width="10" height="10" aria-hidden="true" style="max-width: 10px;"></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+        </ul>
+    </div>
+</section>
+                                
+                                
+        
+
+<!-- ============================================ -->
+<!--                  Timeline                    -->
+<!-- ============================================ -->
+
+<section id="timeline-504">
+    <div class="cs-container">
+        <div class="cs-content" style="text-align: center;align-items: center;">
+            <div class="cs-flex">
+                <span class="cs-topper">Call For Great Service</span>
+                <a href="tel:405-788-1139" style="text-decoration: none;color: white"><h2 class="cs-title" style="display: flex;align-items: center;justify-content: center;margin-top: 1rem;">(405) 788-1139</h2></a>
+                <a href="/contact" class="cs-button-solid" style="background-color: white;border-radius: 10px;display: flex;justify-content: center;margin-top: 1rem;">Contact Online</a>
+            </div>
+            <!-- <p class="cs-text">
+                Choose Legacy 4, Inc., for dependable, round-the-clock plumbing and HVAC service backed by licensed, experienced technicians. We offer transparent pricing, flexible financing, and complete comfort solutions for homes and businesses alike.
+            </p> -->
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">24/7 Emergency Service</h3>
+                <p class="cs-item-text">
+                    We’re always on call to handle urgent HVAC and plumbing issues, day or night.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Skilled, Trusted Technicians</h3>
+                <p class="cs-item-text">
+                    Our licensed, insured, and background-checked pros deliver reliable, high-quality work every time.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Transparent Pricing & Financing</h3>
+                <p class="cs-item-text">
+                    No surprises — just honest, upfront quotes with financing options available.
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">One-Stop Comfort Solution</h3>
+                <p class="cs-item-text">
+                    From AC repairs to leak detection, we cover all your residential and commercial needs under one roof.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+                                
+<div class="custom-shape-divider-top-1743616319">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+
+<style>
+    .custom-shape-divider-top-1743616319 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: white;
+}
+
+.custom-shape-divider-top-1743616319 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-top-1743616319 .shape-fill {
+    fill: #179EF0;
+}
+</style>
+                        
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container" style="max-width: fit-content;justify-content: center;">
+            <div class="cs-right" style="max-width: fit-content;">
+                <span class="cs-topper">Legacy 4 Inc. Plumbing, HVAC & Water Heater Inspections</span>
+                <h2 class="cs-title">Serving the Norman OK, and Surrounding Oklahoma Areas With Our Legacy</h2>
+                <p class="cs-text">
+                    Ready to schedule or have any questions? Call <a href="tel:405-788-1139" style="text-decoration: none;color: #179EF0">(405) 788-1139</a> or <a href="mailto:service@legacy4plumbing.com" style="text-decoration: none;color: #179EF0">Email Us</a>
+                </p>
+                <p class="cs-text">
+                    We will fill out more information here geo specific or service specific to capture google key words organic search results as well as our ad campaign words to capture for
+                </p>
+                <p class="cs-text">
+                    This section will be filled with additional content and keywords to rank for. Capture as many location specific details as we can from google search with keywords.
+                </p>
+                <a href="" class="cs-button-solid">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+<div class="custom-shape-divider-bottom-1743616213">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+<style>
+    .custom-shape-divider-bottom-1743616213 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743616213 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1743616213 .shape-fill {
+    fill: #F7F7F7;
+}
+</style>
+<section id="services-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Services in Norman OK</span>
+                <!-- <h2 class="cs-title">Legacy 4, Inc. Plumbing Services Near You!</h2> -->
+            </div>
+        </div>                  
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/new-construction.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/new-construction.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/new-construction.jpg" alt="Plumbing Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Norman Plumbing Services</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Fast, Reliable, and Local Plumbing Solutions</strong></li>
+                        <li><strong>Emergency Plumbing Service</strong><br>24/7 response for burst pipes, flooding, and urgent leaks.</li>
+                        <li><strong>Leak Detection & Repair</strong><br>Advanced tools to find and fix water leaks before they cause damage.</li>
+                        <li><strong>Sewer Cleaning & Drain Repair</strong><br>Clear clogged drains and repair damaged sewer lines quickly.</li>
+                        <li><strong>Water Heater Inspection & Replacement</strong><br>Extend the life of your water heater or get a high-efficiency upgrade.</li>
+                        <li><strong>Gas Line Repair & Installation</strong><br>Safe, code-compliant gas piping for homes and businesses.</li>
+                    </ul>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/fridge.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/fridge.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/fridge.jpg" alt="Residential HVAC Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Norman Residential HVAC</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Comfort, Efficiency, and 24/7 Emergency Support</strong></li>
+                        <li><strong>AC Repair & Replacement</strong><br>Fast diagnostics and top-quality system replacements for all brands.</li>
+                        <li><strong>Seasonal Tune-Ups & Maintenance Plans</strong><br>Stay efficient and avoid breakdowns with regular servicing.</li>
+                        <li><strong>Indoor Air Quality Packages</strong><br>Air purification, humidifiers, and filtration systems for healthier living.</li>
+                    </ul>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/air-conditioner.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/air-conditioner.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/air-conditioner.jpg" alt="Commercial HVAC & Refrigeration Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Norman Commercial HVAC</h3>
+                    <ul style="padding: 1rem;">
+                        <li><strong>Commercial HVAC & Refrigeration</strong></li>
+                        <li><strong>Rooftop Unit (RTU) Installation & Repair</strong><br>Scalable solutions for offices, retail, and industrial buildings.</li>
+                        <li><strong>Emergency Refrigeration Repair</strong><br>24/7 rapid response to save your inventory and keep systems running.</li>
+                        <li><strong>Walk-In Cooler, Freezer & Display Case Installation</strong><br>Professional-grade refrigeration setup and service.</li>
+                        <li><strong>Preventative Maintenance Programs</strong><br>Keep your systems efficient and compliant with routine service.</li>
+                        <li><strong>Refrigeration System Maintenance Agreements</strong><br>Custom maintenance contracts to protect your commercial investment.</li>
+                    </ul>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/contract.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/contract.jpg">
+                        <img loading="lazy" decoding="async" src="/assets/images/contract.jpg" alt="More Services" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Much More in Norman</h3>
+                    <p class="cs-item-text">
+                        See All The Services We Provide In Your Area
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</section>
+               
+
+
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+<div class="custom-shape-divider-bottom-1743616219">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+</div>
+<style>
+    .custom-shape-divider-bottom-1743616219 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: #f7f7f7;
+}
+
+.custom-shape-divider-bottom-1743616219 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
+
+.custom-shape-divider-bottom-1743616219 .shape-fill {
+    fill: #ffffff;
+}
+</style>
+<section id="reviews-2244">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-wrapper">
+                <span class="cs-topper">Testimonials</span>
+                <h2 class="cs-title">What Our Clients Say</h2>
+            </div>
+            <a aria-label="read more reviews" href="https://www.google.com/search?sca_esv=6090cfeb380320de&sxsrf=AHTn8zoFzEG4tc1Hz46b42kmp5QP_sOMPQ:1743622293994&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzQYe1haXhBuw864kWTtwjQVD-5JOkd2MtHtDDNjwH0-oPDYoL599j-Lj6q6Ps8QLwNTU0zy7xKxY8QoiR0DH1UtsiI5gdJm164qhqC8_zZ1yUNyA3Q%3D%3D&q=Legacy+4+Plumbing+Reviews&sa=X&ved=2ahUKEwj9y9Kbi7qMAxUWJNAFHX5oHV4Q0bkNegQIKhAD&biw=1920&bih=945&dpr=1" class="cs-button-solid" target="_blank">Our Reviews</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
+                    </picture>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
+                </div>
+                <p class="cs-item-text">
+                    Legacy 4, Inc. From the Receptionist to Jade, buster and Zack. Quality service and people you can trust. Best of the best in my book, thanks for the good work Legacy 4, Inc.
+                </p>
+                <span class="cs-name">
+                    James Johnson
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <span class="cs-desc"></span>
+                </span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
+                    </picture>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
+                </div>
+                <p class="cs-item-text">
+                    I was getting a second opinion on whether I had a leak in my plumbing, they were super- honest and their price was where a normal working person can afford it!! The lady who answered the phone was very very nice!
+                </p>
+                <span class="cs-name">
+                    Kathy Emerson
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <span class="cs-desc"></span>
+                </span>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <picture class="cs-picture">
+                        <img class="cs-image" loading="lazy" decoding="async" src="/assets/svgs/user.svg" alt="profile picture" width="64" height="64">
+                    </picture>
+                    <!-- <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="24" height="20"> -->
+                </div>
+                <p class="cs-item-text">
+                    Anthony, a skilled tech, assessed our situation while presenting possible remedies. We were very impressed with the level of professionalism and responsiveness. Thank you again, Anthony!
+                </p>
+                <span class="cs-name">
+                    Jav C.
+                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
+                    <span class="cs-desc"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+  
+  
+  
+
+
+    {% include 'components/cta.html' %}
+{% endblock %}
