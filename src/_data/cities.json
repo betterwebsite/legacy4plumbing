@@ -1,0 +1,84 @@
+{
+    "cities": [
+        {
+          "name": "Norman",
+          "state": "OK",
+          "slug": "norman",
+          "order": 100
+        },
+        {
+          "name": "Moore",
+          "state": "OK",
+          "slug": "moore",
+          "order": 110
+        },
+        {
+          "name": "Oklahoma City",
+          "state": "OK",
+          "slug": "oklahoma-city",
+          "order": 120
+        },
+        {
+          "name": "Edmond",
+          "state": "OK",
+          "slug": "edmond",
+          "order": 130
+        },
+        {
+          "name": "Noble",
+          "state": "OK",
+          "slug": "noble",
+          "order": 140
+        },
+        {
+          "name": "Newcastle",
+          "state": "OK",
+          "slug": "newcastle",
+          "order": 150
+        },
+        {
+          "name": "Midwest City",
+          "state": "OK",
+          "slug": "midwest-city",
+          "order": 160
+        },
+        {
+          "name": "Yukon",
+          "state": "OK",
+          "slug": "yukon",
+          "order": 170
+        },
+        {
+          "name": "Del City",
+          "state": "OK",
+          "slug": "del-city",
+          "order": 180
+        },
+        {
+          "name": "Warr Acres",
+          "state": "OK",
+          "slug": "warr-acres",
+          "order": 190
+        },
+        {
+          "name": "Tuttle",
+          "state": "OK",
+          "slug": "tuttle",
+          "order": 200
+        },
+        {
+          "name": "Choctaw",
+          "state": "OK",
+          "slug": "choctaw",
+          "order": 210
+        },
+        {
+          "name": "Bethany",
+          "state": "OK",
+          "slug": "bethany",
+          "order": 220
+        }
+      ]
+      
+  }
+  
